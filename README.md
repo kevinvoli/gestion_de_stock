@@ -8,8 +8,8 @@ Ce projet est une application web de **gestion de stocks**, développée en arch
 
 ## 🙋‍♂️ À propos du projet
 
-- 👤 **Kevin Voli** : Développement du **frontend** (React/Next.js), du **service d’authentification**, et du **gateway**.
-- 👥 Autre développeur : En charge d’autres services back-end.
+- 👤 **Kevin Voli** : Développement du **frontend** (React/Next.js), du **service d’authentification**, **gateway**, **authentification**, **log**, **stock**.
+- 👥 **AZEEZ RIDWAN** : En charge des service **utilisateurs**   back-end et d'une partie du **frontend**.
 
 > 💡 Cette répartition permet de simuler une vraie équipe de production dans une architecture distribuée.
 
@@ -18,7 +18,7 @@ Ce projet est une application web de **gestion de stocks**, développée en arch
 ## 🔧 Stack technique
 
 - 🔹 Frontend : React, Next.js, Tailwind CSS
-- 🔹 Backend : NestJS, TypeORM, MySQL
+- 🔹 Backend : NestJS, TypeORM, MySQL, Python, Fastapi
 - 🔹 Architecture : Microservices (communication via protocole TCP)
 - 🔹 Authentification : JWT
 - 🔹 Permissions : Rôles, autorisations dynamiques
@@ -90,6 +90,6 @@ npm install
 npm run start:dev
 
 # Lancer le frontend
-cd ./frontEnd/admin
+cd ./frontEnd/adminDashboard/admin
 npm install
 npm run dev
