@@ -102,9 +102,10 @@ npm run start:dev
 cd ./module_notification
 # Créer un environnement virtuel
 python -m venv venv
-# Activer l'environnement virtuel
-# sur Mac/Linux
+# Activer l'environnement virtuel sur Mac/Linux
 source venv/bin/activate
+# Activer l'environnement virtuel sur windows
+../venv.Scripts/activate.bat
 pip install -r requiments.txt
 cd ./src
 uvicorn main:app
@@ -114,9 +115,10 @@ uvicorn main:app
 cd ./module_access_control
 # Créer un environnement virtuel
 python -m venv venv
-# Activer l'environnement virtuel
-# sur Mac/Linux
+# Activer l'environnement virtuel Mac/Linux
 source venv/bin/activate
+# Activer l'environnement virtuel sur windows
+../venv.Scripts/activate.bat
 pip install -r requiments.txt
 cd ./src
 uvicorn main:app
