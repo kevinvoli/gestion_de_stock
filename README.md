@@ -70,15 +70,15 @@ SERVER_PORT=3001
 NEXTAUTH_SECRET="H2sn4MCR5tNjOrtVMll2TRUGZo/fnFbXJ+8Suc/9Ez8=" # Added by `npx auth`. Read more: https://cli.authjs.dev
 NEXTAUTH_URL=http://localhost:3000 
 
-### Lancer le projet
+# Lancer le projet
 
-# Cloner le projet
+### Cloner le projet
 ```bash
 git clone https://github.com/kevinvoli/gestion_de_stock/
 cd gestion-stock
 ```
 
-# Lancer les services backend ( NestJS + microservices )
+### Lancer les services backend ( NestJS + microservices )
 ```bash
 cd ./module_auth
 npm install
@@ -103,8 +103,8 @@ npm install
 npm run start:dev
 ```
 
+### Lancer les services backend ( FastApi + microservices )
 ```bash
-# Lancer les services backend ( FastApi + microservices )
 cd ./module_notification
 # Créer un environnement virtuel
 python -m venv venv
@@ -141,7 +141,7 @@ uvicorn main:app
 ```
 
 
-# Lancer le frontend
+### Lancer le frontend
 ```bash
 cd ./frontEnd/adminDashboard/admin
 npm install
