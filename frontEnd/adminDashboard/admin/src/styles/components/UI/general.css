@@ -1,0 +1,15 @@
+.color-palette {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+
+}
+.color-palette-set {
+  margin-bottom: 15px;
+}
+.color-palette span {
+  display: none;
+}
+.color-palette:hover span {
+  display: block;
+}
