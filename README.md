@@ -97,12 +97,6 @@ npm install
 npm run start:dev
 ```
 
-```bash
-cd ./module_stock
-npm install
-npm run start:dev
-```
-
 ### Lancer les services backend ( FastApi + microservices )
 ```bash
 cd ./module_notification
