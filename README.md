@@ -8,10 +8,10 @@ Ce projet est une application web de **gestion de stocks**, développée en arch
 
 ## 🙋‍♂️ À propos du projet
 
-- 👤 **Kevin Voli** : Développement du **frontend** (React/Next.js), du **service d’authentification**, **gateway**, **authentification**, **log**.
-- 👥 **AZEEZ RIDWAN** : Développement d'une partie du **front-end**, des services **access-control**, **notification**, **stock**.
+- 👤 **Kevin Voli** : Développement du **frontend** (React/Next.js), du **service d’authentification**, **gateway**, **stock**, **log**.
+- 👥 **AZEEZ RIDWAN** : Développement d'une partie du **front-end**, des services **access-control**, **notification**, **commande**.
 
-> 💡 Cette répartition permet de simuler une vraie équipe de production dans une architecture distribuée.
+
 
 ---
 
@@ -97,6 +97,12 @@ npm install
 npm run start:dev
 ```
 
+```bash
+cd ./module_stock
+npm install
+npm run start:dev
+```
+
 ### Lancer les services backend ( FastApi + microservices )
 ```bash
 cd ./module_notification
@@ -108,7 +114,7 @@ source venv/bin/activate
 ../venv.Scripts/activate.bat
 pip install -r requiments.txt
 cd ./src
-uvicorn main:app
+python main.py
 ```
 
 ```bash
@@ -121,11 +127,11 @@ source venv/bin/activate
 ../venv.Scripts/activate.bat
 pip install -r requiments.txt
 cd ./src
-uvicorn main:app
+python main.py
 ```
 
 ```bash
-cd ./module_stock
+cd ./module_commande
 #Créer un environnement virtuel 
 python -m venv venv
 # Activer l'environnement virtuel
