@@ -108,7 +108,7 @@ npm run start:dev
 ### Lancer les services backend ( FastApi + microservices )
 ```bash
 cd ./module_notification
-python -m venv venv #Créer un environnement virtuel 
+python -m venv venv # Créer un environnement virtuel sur Mac/Linux/Windows
 source venv/bin/activate # Activer l'environnement virtuel sur Mac/Linux
 venv\Scripts\activate.bat # Activer l'environnement virtuel sur Windows (PowerShell)
 pip install -r requiments.txt
@@ -118,7 +118,7 @@ python main.py
 
 ```bash
 cd ./module_access_control
-python -m venv venv #Créer un environnement virtuel 
+python -m venv venv # Créer un environnement virtuel sur Mac/Linux/Windows
 source venv/bin/activate # Activer l'environnement virtuel sur Mac/Linux
 venv\Scripts\activate.bat # Activer l'environnement virtuel sur Windows (PowerShell)
 pip install -r requiments.txt
@@ -128,7 +128,7 @@ python main.py
 
 ```bash
 cd ./module_commande
-python -m venv venv #Créer un environnement virtuel 
+python -m venv venv # Créer un environnement virtuel sur Mac/Linux/Windows
 source venv/bin/activate # Activer l'environnement virtuel sur Mac/Linux
 venv\Scripts\activate.bat # Activer l'environnement virtuel sur Windows (PowerShell)
 pip install -r requiments.txt
