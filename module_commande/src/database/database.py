@@ -10,7 +10,7 @@ SERVER_PORT = os.getenv("SERVER_PORT")
 
 
 #SQLALCHEMY_DATABASE_URL = f"{DATABASE_TYPE}+mysqlconnector://{MYSQL_USER}{MYSQL_PASSWORD}@{MYSQL_PORT}:{MYSQL_PORT}/{MYSQL_DATABASE}"
-SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://root:12345678@127.0.0.1:3306/depottrack_db"
+SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:3306/{MYSQL_DATABASE}"
 
 connect_args = {"check_same_thread": False}
 engine = create_engine(SQLALCHEMY_DATABASE_URL)

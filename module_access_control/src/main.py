@@ -5,14 +5,17 @@ from threading import Thread
 from typing import Annotated
 from fastapi import FastAPI, Depends
 from sqlmodel import Session
+from contextlib import asynccontextmanager
 
 from database.database import create_db_and_tables
 from dependencies import get_session
 from utils.server.register_service import register_services
 from utils.server.server_auth import server_tcp_auth
+from utils.server.ip import get_ip
 
 SessionDep = Annotated[Session, Depends(get_session)]
 
+host = get_ip()
 app = FastAPI()
 
 def start_server_tcp_auth():
@@ -27,10 +30,9 @@ def on_startup():
     
     
 
-
 @app.get("/")
 def read_root():
     return {"hello world 1"}
 
 if __name__ == '__main__':
-    uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)
+    uvicorn.run("main:app", host=host, port=8001, reload=True)

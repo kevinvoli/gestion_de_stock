@@ -3,28 +3,14 @@ from requests.exceptions import RequestException, ConnectionError
 import socket
 
 from utils.logs.loggers import logger
+from utils.server.ip import get_ip
 
 
 
-
-def get_ip():
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    try:
-        # Utiliser 8.8.8.8 comme serveur DNS
-        s.connect(('8.8.8.8', 80))
-        ip = s.getsockname()[0]
-    except Exception:
-        ip = '127.0.0.1'
-    finally:
-        s.close()
-    return ip
-
-
-
-serviceName = "ServiceUser"
+serviceName = "ServiceCommande"
 host = get_ip()
 
-#192.168.252.216
+
 
 def register_services():
 
@@ -40,7 +26,7 @@ def register_services():
     try:
         response = requests.post(url, payload, timeout=5)
         if response.status_code in (200, 201):
-            logger.info(f"✅ Module Accès Control est enregistré sous le nom {serviceName}")
+            logger.info(f"✅ Module module Commande est enregistré sous le nom {serviceName}")
         else:
             logger.error("⛔ Erreur lors de l'enregistrement du service:", response.text)
     except ConnectionError as e:

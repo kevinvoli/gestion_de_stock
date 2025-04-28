@@ -79,14 +79,16 @@ cd gestion-stock
 ```
 
 ### Lancer les services backend ( NestJS + microservices )
+>⚠️🚨 Commencer par lancer le module **gateway** en premier
+
 ```bash
-cd ./module_auth
+cd ./module_gateway
 npm install
 npm run start:dev
 ```
 
 ```bash
-cd ./module_gateway
+cd ./module_auth
 npm install
 npm run start:dev
 ```
@@ -106,12 +108,9 @@ npm run start:dev
 ### Lancer les services backend ( FastApi + microservices )
 ```bash
 cd ./module_notification
-# Créer un environnement virtuel
-python -m venv venv
-# Activer l'environnement virtuel sur Mac/Linux
-source venv/bin/activate
-# Activer l'environnement virtuel sur windows
-../venv.Scripts/activate.bat
+python -m venv venv #Créer un environnement virtuel 
+source venv/bin/activate # Activer l'environnement virtuel sur Mac/Linux
+venv\Scripts\activate.bat # Activer l'environnement virtuel sur Windows (PowerShell)
 pip install -r requiments.txt
 cd ./src
 python main.py
@@ -119,12 +118,9 @@ python main.py
 
 ```bash
 cd ./module_access_control
-# Créer un environnement virtuel
-python -m venv venv
-# Activer l'environnement virtuel Mac/Linux
-source venv/bin/activate
-# Activer l'environnement virtuel sur windows
-../venv.Scripts/activate.bat
+python -m venv venv #Créer un environnement virtuel 
+source venv/bin/activate # Activer l'environnement virtuel sur Mac/Linux
+venv\Scripts\activate.bat # Activer l'environnement virtuel sur Windows (PowerShell)
 pip install -r requiments.txt
 cd ./src
 python main.py
@@ -132,20 +128,18 @@ python main.py
 
 ```bash
 cd ./module_commande
-#Créer un environnement virtuel 
-python -m venv venv
-# Activer l'environnement virtuel
-# sur Mac/Linux
-source venv/bin/activate
+python -m venv venv #Créer un environnement virtuel 
+source venv/bin/activate # Activer l'environnement virtuel sur Mac/Linux
+venv\Scripts\activate.bat # Activer l'environnement virtuel sur Windows (PowerShell)
 pip install -r requiments.txt
 cd ./src
-uvicorn main:app
+python main.py
 ```
 
 
 ### Lancer le frontend
 ```bash
-cd ./frontEnd/adminDashboard/admin
+cd ./frontEnd/
 npm install
 npm run dev
 ```
